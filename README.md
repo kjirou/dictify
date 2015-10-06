@@ -14,7 +14,7 @@ npm install --save dictify
 
 ```js
 var assert = require('assert');
-var dictify = require('../index');
+var dictify = require('dictify');
 
 var objectList = [
   { x: 'foo' },
