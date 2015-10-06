@@ -20,6 +20,9 @@
     "url": "https://github.com/kjirou/dictify/issues"
   },
   "homepage": "https://github.com/kjirou/dictify#readme",
+  "engines": {
+    "node": ">=0.10"
+  },
   "devDependencies": {
     "mocha": "2.3.3"
   }
