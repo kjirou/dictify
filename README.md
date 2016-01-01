@@ -24,14 +24,26 @@ var objectList = [
   { x: 'bar' },
   { x: 'baz' },
 ];
-var dict = dictify(objectList, 'x');
 
+var dict = dictify(objectList, 'x');
 assert.deepEqual(
   dict,
   {
     foo: { x: 'foo' },
     bar: { x: 'bar' },
     baz: { x: 'baz' },
+  }
+);
+
+var dictByFunctionIndexer = dictify(objectList, function(obj) {
+  return obj.x.toUpperCase();
+});
+assert.deepEqual(
+  dictByFunctionIndexer,
+  {
+    FOO: { x: 'foo' },
+    BAR: { x: 'bar' },
+    BAZ: { x: 'baz' },
   }
 );
 ```
